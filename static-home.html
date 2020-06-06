@@ -59,9 +59,65 @@
 		.covid-msg > * + * {
 			margin-left: 6px;
 		}
+		.font-disclaimer {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			color: rgba(255, 255, 255, 0.25);
+			font-size: 11px;
+		}
+		.font-disclaimer a {
+			color: inherit;
+			text-decoration: underline;
+		}
+		.chooser .chooser-step,
+		.fade-down-header p,
+		a.btn.wd-btn-round-2 {
+			line-height: 1.4;
+		}
 		@media (min-width: 350px) {
 			.covid-msg {
 				flex-direction: row;
+			}
+		}
+		@media (max-width: 767px) {
+			.wd-section-heading-wrapper.wd-section-heading-wrapper,
+			.chooser {
+				padding-left: 10px;
+				padding-right: 10px;
+				text-align: center;
+			}
+			.vc_row {
+				margin-left: 0;
+				margin-right: 0;
+			}
+			.vc_column_container > .vc_column-inner {
+				padding-left: 0;
+				padding-right: 0;
+			}
+			.reimagination-icon-container {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-evenly;
+			}
+			.reimagination-divider-item {
+				display: none !important;
+			}
+			.before-after-container {
+			}
+			.before-after-container .vc_carousel-slideline-inner {
+				display: flex;
+				flex-direction: column;
+			}
+			.before-after-container .vc_item {
+				width: auto !important;
+				height: auto !important;
+			}
+			.before-after-container.vc_images_carousel.vc_per-view-more .vc_carousel-slideline .vc_carousel-slideline-inner >.vc_item >.vc_inner {
+				margin: 10px 0;
+			}
+			.before-after-container .vc_carousel-control {
+				display: none !important;
 			}
 		}
 		@media (max-width: 479px) {
@@ -76,6 +132,31 @@
 			.consult-trigger {
 				line-height: 1.4;
 				font-size: 12px;
+			}
+			.reimagination-icon-container {
+				flex-direction: column;
+				align-items: center;
+			}
+			.reimagination-icon-container li {
+				padding-left: 0;
+			}
+			.chooser-panel.choose-style .pillar-container {
+				flex-direction: column;
+			}
+			.chooser-panel.choose-style .pillar.pillar-left-col,
+			.chooser-panel.choose-style .pillar.pillar-right-col {
+				max-width: none;
+			}
+			.smaller-title,
+			.wd-section-heading h3,
+			.fade-down-header p,
+			.fade-down-header-brochure p {
+				font-size: 40px !important;
+				text-align: center;
+			}
+			.font-disclaimer {
+				position: static;
+				text-align: center;
 			}
 		}
 	</style>
@@ -345,7 +426,7 @@
 															to the outdoors</strong> 365 days a year
 														</div>
 													</li>
-													<li><img class="lozad reimagination-divider"
+													<li class="reimagination-divider-item"><img class="lozad reimagination-divider"
 													         data-src="https://skyewallsbywws.com/wp-content/uploads/2020/03/light-blue-gradient.jpg"
 													         alt=""/></li>
 													<li class="natural-light"><img class="lozad size-full wp-image-1987"
@@ -356,7 +437,7 @@
 														<div class="reimagination-content wd-primary-color">Loads of
 															<strong>natural light</strong></div>
 													</li>
-													<li><img class="lozad reimagination-divider"
+													<li class="reimagination-divider-item"><img class="lozad reimagination-divider"
 													         src="https://skyewallsbywws.com/wp-content/uploads/2020/03/light-blue-gradient.jpg"
 													         alt=""/></li>
 												</ul>
@@ -402,7 +483,7 @@
 														<div class="reimagination-content wd-primary-color">Increased
 															<strong>airflow and circulation</strong></div>
 													</li>
-													<li><img class="lozad reimagination-divider"
+													<li class="reimagination-divider-item"><img class="lozad reimagination-divider"
 													         data-src="https://skyewallsbywws.com/wp-content/uploads/2020/03/light-blue-gradient.jpg"
 													         alt=""/></li>
 													<li class="spacious"><img class="lozad size-full wp-image-1993"
@@ -413,7 +494,7 @@
 														<div class="reimagination-content wd-primary-color">Rooms appear
 															<strong>more spacious</strong></div>
 													</li>
-													<li><img class="lozad reimagination-divider"
+													<li class="reimagination-divider-item"><img class="lozad reimagination-divider"
 													         data-src="https://skyewallsbywws.com/wp-content/uploads/2020/03/light-blue-gradient.jpg"
 													         alt=""/></li>
 												</ul>
@@ -483,7 +564,7 @@
 								<div id="vc_images-carousel-1-1591315075" data-ride="vc_carousel" data-wrap="false"
 								     style="width: 100%;" data-interval="0" data-auto-height="yes"
 								     data-mode="horizontal" data-partial="false" data-per-view="3"
-								     data-hide-on-end="true" class="vc_slide vc_images_carousel">
+								     data-hide-on-end="true" class="vc_slide vc_images_carousel before-after-container">
 									<ol class="vc_carousel-indicators">
 										<li data-target="#vc_images-carousel-1-1591315075" data-slide-to="0"></li>
 										<li data-target="#vc_images-carousel-1-1591315075" data-slide-to="1"></li>
@@ -1527,7 +1608,7 @@
 							<div class="wpb_wrapper">
 								<div class="wpb_text_column wpb_content_element  wpb_animate_when_almost_visible wpb_fadeInDown fadeInDown fade-down-header">
 									<div class="wpb_wrapper">
-										<p style="text-align: center;"><strong>Let the Transformation
+										<p style="text-align: center;"><strong class="smaller-title">Let the Transformation
 											Begin</strong></p>
 
 									</div>
@@ -1856,19 +1937,6 @@
 
 
 		</div>
-		<style>
-			.font-disclaimer {
-				position: absolute;
-				bottom: 0;
-				right: 0;
-				color: rgba(255, 255, 255, 0.25);
-				font-size: 11px;
-			}
-			.font-disclaimer a {
-				color: inherit;
-				text-decoration: underline;
-			}
-		</style>
 		<div class="font-disclaimer">Icons powered by <a href="https://fontawesome.com/license">Font Awesome</a>.</div>
 	</div>
 
