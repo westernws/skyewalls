@@ -37,6 +37,47 @@
 			background: none !important;
 			padding: 0 !important;
 		}
+		body {
+			overflow-x: visible;
+		}
+		.wd-top-nav {
+			position: relative;
+			z-index: 20;
+		}
+		header.main-nav {
+			position: sticky;
+			background: #fff;
+			top: 0;
+			z-index: 10;
+			box-shadow: 0 1px 10px #d8d8d8
+		}
+		.covid-msg {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+		}
+		.covid-msg > * + * {
+			margin-left: 6px;
+		}
+		@media (min-width: 350px) {
+			.covid-msg {
+				flex-direction: row;
+			}
+		}
+		@media (max-width: 479px) {
+			.logo {
+				flex-shrink: 0;
+				margin-right: 1rem;
+			}
+			header.main-nav .nav {
+				position: static;
+				margin: 1rem 0;
+			}
+			.consult-trigger {
+				line-height: 1.4;
+				font-size: 12px;
+			}
+		}
 	</style>
 	<link rel="stylesheet" id="simple-line-icon-css"
 	      href="https://skyewallsbywws.com/wp-content/themes/weefly/assets/css/simple-line-icons.css?ver=5.3.3"
@@ -78,18 +119,9 @@
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
 <div class="wd-top-nav">
-	<div class="covid-msg">How We're Responding to COVID-19. <a href="covid-19">learn more</a></div>
-	<div class="container">
-		<div class="wd-header-top-inner">
-			<div class="wd-header-left">
-			</div>
-			<div class="wd-header-right">
-				<div class="wd-user-cart">
-					<ul>
-					</ul>
-				</div>
-			</div>
-		</div>
+	<div class="covid-msg">
+		<span>How We're Responding to COVID-19.</span>
+		<a href="/covid-19">learn more</a>
 	</div>
 </div>
 <header class="main-nav">
@@ -101,7 +133,7 @@
 					<div class="logo">
 						<a href="https://skyewallsbywws.com/">
 							<img class="lozad"
-							     data-src="https://skyewallsbywws.com/wp-content/uploads/2020/03/skyewalls-logo-1.jpg"
+							     data-src="static-home-assets/skyewalls-logo-1-min.jpg"
 							     alt="Skye Walls by WWS"/>
 						</a>
 					</div>
@@ -109,37 +141,6 @@
 						<nav>
 							<a href="contact-us" class="consult-trigger">request a free consultation</a>
 						</nav>
-					</div>
-					<div class="side-cart">
-						<ul>
-						</ul>
-						<div id="nav-toggle-label">
-							<div id="hamburger">
-								<span></span>
-								<span></span>
-								<span></span>
-							</div>
-							<div id="cross">
-								<span></span>
-								<span></span>
-							</div>
-						</div>
-					</div>
-
-					<div class="mobile-navigation">
-						<div class="mobile-logo">
-							<a href="https://skyewallsbywws.com/">
-								<img class="lozad"
-								     data-src="https://skyewallsbywws.com/wp-content/uploads/2020/03/skyewalls-logo.jpg"
-								     alt="Skye Walls by WWS"/>
-							</a>
-							<div id="nav-toggle-label2">
-								<div id="cross2">
-									<span></span>
-									<span></span>
-								</div>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -188,7 +189,7 @@
 			</div>
 		</div>
 		<div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-parallax="1.5"
-		     data-vc-parallax-image="https://skyewallsbywws.com/wp-content/uploads/2020/04/cloud-1.jpg"
+		     data-vc-parallax-image="static-home-assets/cloud-1-min.jpg"
 		     class="vc_row wpb_row vc_row-fluid vc_row-has-fill vc_general vc_parallax vc_parallax-content-moving">
 			<div class="wpb_column vc_column_container vc_col-sm-12">
 				<div class="vc_column-inner">
@@ -272,7 +273,7 @@
 		</div>
 		<div class="vc_row-full-width vc_clearfix"></div>
 		<div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-parallax="1.5"
-		     data-vc-parallax-image="https://skyewallsbywws.com/wp-content/uploads/2020/04/cloud-2.jpg"
+		     data-vc-parallax-image="static-home-assets/cloud-2-min.jpg"
 		     class="vc_row wpb_row vc_row-fluid vc_row-has-fill vc_general vc_parallax vc_parallax-content-moving">
 			<div class="wpb_column vc_column_container vc_col-sm-12">
 				<div class="vc_column-inner">
@@ -348,9 +349,9 @@
 													         data-src="https://skyewallsbywws.com/wp-content/uploads/2020/03/light-blue-gradient.jpg"
 													         alt=""/></li>
 													<li class="natural-light"><img class="lozad size-full wp-image-1987"
-													                               data-src="https://skyewallsbywws.com/wp-content/uploads/2020/03/Icon_AReimaginationOfSpace_2_Blue@2x.jpg"
+													                               data-src="static-home-assets/Icon_AReimaginationOfSpace_2_Blue@2x-min.jpg"
 													                               alt="" width="181" height="181"
-													                               srcset="https://skyewallsbywws.com/wp-content/uploads/2020/03/Icon_AReimaginationOfSpace_2_Blue@2x.jpg 181w, https://skyewallsbywws.com/wp-content/uploads/2020/03/Icon_AReimaginationOfSpace_2_Blue@2x-150x150.jpg 150w, https://skyewallsbywws.com/wp-content/uploads/2020/03/Icon_AReimaginationOfSpace_2_Blue@2x-100x100.jpg 100w"
+													                               srcset="static-home-assets/Icon_AReimaginationOfSpace_2_Blue@2x-min.jpg 181w, https://skyewallsbywws.com/wp-content/uploads/2020/03/Icon_AReimaginationOfSpace_2_Blue@2x-150x150.jpg 150w, https://skyewallsbywws.com/wp-content/uploads/2020/03/Icon_AReimaginationOfSpace_2_Blue@2x-100x100.jpg 100w"
 													                               sizes="(max-width: 181px) 100vw, 181px"/>
 														<div class="reimagination-content wd-primary-color">Loads of
 															<strong>natural light</strong></div>
@@ -429,7 +430,7 @@
 		</div>
 		<div class="vc_row-full-width vc_clearfix"></div>
 		<div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-parallax="1.5"
-		     data-vc-parallax-image="https://skyewallsbywws.com/wp-content/uploads/2020/04/cloud-3.jpg"
+		     data-vc-parallax-image="static-home-assets/cloud-3-min.jpg"
 		     class="vc_row wpb_row vc_row-fluid vc_row-has-fill vc_general vc_parallax vc_parallax-content-moving">
 			<div class="wpb_column vc_column_container vc_col-sm-12">
 				<div class="vc_column-inner">
@@ -1130,13 +1131,13 @@
 								<div class="vc_gitem-animated-block  vc_gitem-animate vc_gitem-animate-slideBottom"
 								     data-vc-animation="slideBottom">
 								<div class="vc_gitem-zone vc_gitem-zone-a vc-gitem-zone-height-mode-auto vc-gitem-zone-height-mode-auto-1-1"
-								     style="background-image: url('https://skyewallsbywws.com/wp-content/uploads/2020/04/ContemporaryDesign@2x.jpg') !important;">
-									<img data-src="https://skyewallsbywws.com/wp-content/uploads/2020/04/ContemporaryDesign@2x.jpg"
+								     style="background-image: url('static-home-assets/ContemporaryDesign@2x-min.jpg') !important;">
+									<img data-src="static-home-assets/ContemporaryDesign@2x-min.jpg"
 									     class="lozad vc_gitem-zone-img" alt="">
 									<div class="vc_gitem-zone-mini"></div>
 								</div>
 								<div class="vc_gitem-zone vc_gitem-zone-b vc_custom_1419002217534 vc-gitem-zone-height-mode-auto vc_gitem-is-link">
-									<a href="https://skyewallsbywws.com/wp-content/uploads/2020/04/ContemporaryDesign@2x.jpg"
+									<a href="static-home-assets/ContemporaryDesign@2x-min.jpg"
 									   title="" data-rel="prettyPhoto[rel--618644501]"
 									   data-vc-gitem-zone="prettyphotoLink"
 									   class="vc_gitem-link prettyphoto vc-zone-link vc-prettyphoto-link"></a>
@@ -1172,13 +1173,13 @@
 							<div class="vc_gitem-animated-block  vc_gitem-animate vc_gitem-animate-slideBottom"
 							     data-vc-animation="slideBottom">
 							<div class="vc_gitem-zone vc_gitem-zone-a vc-gitem-zone-height-mode-auto vc-gitem-zone-height-mode-auto-1-1"
-							     style="background-image: url('https://skyewallsbywws.com/wp-content/uploads/2020/04/ClimateReadyGlass.jpg') !important;">
-								<img data-src="https://skyewallsbywws.com/wp-content/uploads/2020/04/ClimateReadyGlass.jpg"
+							     style="background-image: url('static-home-assets/ClimateReadyGlass-min.jpg') !important;">
+								<img data-src="static-home-assets/ClimateReadyGlass-min.jpg"
 								     class="lozad vc_gitem-zone-img" alt="">
 								<div class="vc_gitem-zone-mini"></div>
 							</div>
 							<div class="vc_gitem-zone vc_gitem-zone-b vc_custom_1419002217534 vc-gitem-zone-height-mode-auto vc_gitem-is-link">
-								<a href="https://skyewallsbywws.com/wp-content/uploads/2020/04/ClimateReadyGlass.jpg"
+								<a href="static-home-assets/ClimateReadyGlass-min.jpg"
 								   title="" data-rel="prettyPhoto[rel--618644501]" data-vc-gitem-zone="prettyphotoLink"
 								   class="vc_gitem-link prettyphoto vc-zone-link vc-prettyphoto-link"></a>
 								<div class="vc_gitem-zone-mini">
@@ -1284,7 +1285,7 @@
 </div>
 <div class="vc_row-full-width vc_clearfix"></div>
 <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-parallax="1.5"
-     data-vc-parallax-image="https://skyewallsbywws.com/wp-content/uploads/2020/04/cloud-5.jpg"
+     data-vc-parallax-image="static-home-assets/cloud-5-min.jpg"
      class="vc_row wpb_row vc_row-fluid vc_custom_1591032842633 vc_row-has-fill vc_general vc_parallax vc_parallax-content-moving">
 	<div class="wpb_column vc_column_container vc_col-sm-12">
 		<div class="vc_column-inner">
@@ -1591,7 +1592,7 @@
 </div>
 <div class="vc_row-full-width vc_clearfix"></div>
 <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-parallax="1.5"
-     data-vc-parallax-image="https://skyewallsbywws.com/wp-content/uploads/2020/04/cloud-5.jpg"
+     data-vc-parallax-image="static-home-assets/cloud-5-min.jpg"
      class="vc_row wpb_row vc_row-fluid vc_custom_1586235496060 vc_row-has-fill vc_rtl-columns-reverse vc_row-o-content-bottom vc_row-flex vc_general vc_parallax vc_parallax-content-moving">
 	<div class="wpb_column vc_column_container vc_col-sm-12">
 		<div class="vc_column-inner">
@@ -1604,7 +1605,7 @@
 </div>
 <div class="vc_row-full-width vc_clearfix"></div>
 <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-parallax="1.5"
-     data-vc-parallax-image="https://skyewallsbywws.com/wp-content/uploads/2020/04/cloud-7.jpg"
+     data-vc-parallax-image="static-home-assets/cloud-7-min.jpg"
      class="vc_row wpb_row vc_row-fluid vc_custom_1586235683578 vc_row-has-fill vc_general vc_parallax vc_parallax-content-moving">
 	<div class="wpb_column vc_column_container vc_col-sm-12">
 		<div class="vc_column-inner">
@@ -1718,7 +1719,7 @@
 </div>
 <div class="vc_row-full-width vc_clearfix"></div>
 <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-parallax="1.5"
-     data-vc-parallax-image="https://skyewallsbywws.com/wp-content/uploads/2020/04/cloud-3.jpg"
+     data-vc-parallax-image="static-home-assets/cloud-3-min.jpg"
      class="vc_row wpb_row vc_row-fluid vc_row-has-fill vc_row-o-content-bottom vc_row-flex vc_general vc_parallax vc_parallax-content-moving">
 	<div class="wpb_column vc_column_container vc_col-sm-12">
 		<div class="vc_column-inner">
@@ -1740,7 +1741,7 @@
 
 	<!-- Footer-Widgets -->
 
-	<div class="container">
+	<div class="container" style="position: relative;">
 
 		<div class="row">
 
@@ -1813,20 +1814,24 @@
 								<h4>Follow us</h4>
 								<ul>
 									<li>
-										<a href="https://www.facebook.com/SkyeWallsbyWWS/"><i
-												class="fab fa-facebook-f"></i></a>
+										<a href="https://www.facebook.com/SkyeWallsbyWWS/">
+											<img src="static-home-assets/facebook-f-brands.svg" alt="" width="10" height="16" style="height: 16px;" />
+										</a>
 									</li>
 									<li>
-										<a href="https://www.instagram.com/skye_walls_by_wws/"><i
-												class="fab fa-instagram"></i></a>
+										<a href="https://www.instagram.com/skye_walls_by_wws/">
+											<img src="static-home-assets/instagram-brands.svg" alt="" width="14" height="16" style="height: 16px;" />
+										</a>
 									</li>
 									<li>
-										<a href="https://www.pinterest.com/SkyeWallsbyWWS/pins/"><i
-												class="fab fa-pinterest"></i></a>
+										<a href="https://www.pinterest.com/SkyeWallsbyWWS/pins/">
+											<img src="static-home-assets/pinterest-brands.svg" alt="" width="18" height="16" style="height: 16px;" />
+										</a>
 									</li>
 									<li>
-										<a href="https://www.youtube.com/user/westernwindowsystems"><i
-												class="fab fa-youtube"></i></a>
+										<a href="https://www.youtube.com/user/westernwindowsystems">
+											<img src="static-home-assets/youtube-brands.svg" alt="" width="18" height="16" style="height: 16px;" />
+										</a>
 									</li>
 								</ul>
 							</div>
@@ -1851,55 +1856,23 @@
 
 
 		</div>
-
-
+		<style>
+			.font-disclaimer {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				color: rgba(255, 255, 255, 0.25);
+				font-size: 11px;
+			}
+			.font-disclaimer a {
+				color: inherit;
+				text-decoration: underline;
+			}
+		</style>
+		<div class="font-disclaimer">Icons powered by <a href="https://fontawesome.com/license">Font Awesome</a>.</div>
 	</div>
 
 	<!-- /Footer-Widgets -->
-
-
-	<!-- Footer-Bottom -->
-
-	<div class="wd-footer_bottom">
-
-		<div class="container">
-
-			<div class="row">
-
-
-				<div class="col-lg-5">
-					<div class="footer-copyright-text">
-
-						<p>Copyright 2020, weefly All Rights Reserved.</p>
-
-					</div>
-
-				</div>
-
-
-				<div class="col-lg-2">
-
-					<div id="back-top" class="back-top" style="display: block;">
-
-						<a href="#top"><i class="fa fa-angle-up" aria-hidden="true"></i> </a>
-
-					</div>
-
-				</div>
-
-				<div class="col-lg-5">
-
-
-				</div>
-
-			</div>
-
-		</div>
-
-	</div>
-
-	<!-- /Footer-Bottom -->
-
 </footer>
 <!-- Begin Pinterest -->
 <meta name="p:domain_verify" content="c5b831bc5012b7db1f73cde94d10d5b5"/>
