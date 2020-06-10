@@ -75,6 +75,37 @@
 			width: 125px;
 			line-height: 1.1;
 		}
+		.ways-to-pay {
+			padding: 10% 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		.ways-to-pay .pillar > * + * {
+			padding: 20px 0 0;
+		}
+		.ways-to-pay .pillar {
+			max-width: none;
+			width: 100%;
+			padding: 30px;
+		}
+		.ways-number {
+			color: #90c5ef;
+			font-size: 72px;
+			font-weight: bold;
+			line-height: 72px;
+		}
+		.ways-title {
+			font-weight: bold;
+			margin-top: -10px;
+		}
+		.ways-desc {
+			font-size: 16px;
+		}
+		.ways-cta {
+			text-transform: uppercase;
+			margin: 40px 0 30px !important;
+		}
 		#our-process {
 			opacity: 1;
 		}
@@ -109,8 +140,25 @@
 				padding: 5%;
 				max-width: 700px;
 			}
+			.ways-to-pay {
+				padding: 10% 0;
+				flex-direction: row;
+			}
+			.ways-to-pay .pillar + .pillar {
+				margin-left: 30px;
+			}
+			.ways-to-pay .pillar {
+				max-width: 50%;
+				padding: 30px;
+			}
 		}
 		@media (min-width: 992px) {
+			.ways-to-pay .pillar {
+				max-width: 33%;
+			}
+			.ways-to-pay {
+				padding: 10%;
+			}
 			.bot-title {
 				font-size: 50px;
 				width: 375px;
@@ -183,7 +231,24 @@
 <div class="wd-sections">
 	<div class="container">
 		<!-- BEGIN TWO WAYS TO PAY -->
-
+		<div class="ways-to-pay">
+			<div class="pillar">
+				<div class="ways-number">1</div>
+				<div class="ways-title">Skye Walls Preferred Pay</div>
+				<div class="ways-desc">
+					Offered in select locations, our financing, powered by Enerbank, can accommodate a wide range of customers.
+				</div>
+				<a href="https://application.enerbank.com/" class="btn wd-btn-round-2 ways-cta">Apply Now</a>
+			</div>
+			<div class="pillar">
+				<div class="ways-number">2</div>
+				<div class="ways-title">Buy Skye Walls on the Spot</div>
+				<div class="ways-desc">
+					We accept cash, personal check, cashier’s check, or debit card.
+				</div>
+				<a href="/contact/" class="btn wd-btn-round-2 ways-cta">Request a Free Consultation</a>
+			</div>
+		</div>
 		<!-- END TWO WAYS TO PAY -->
 	</div>
 	<div id="our-process" data-vc-full-width="true" data-vc-full-width-init="true" data-vc-parallax="1.5"
