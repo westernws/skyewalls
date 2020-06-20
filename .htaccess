@@ -1,8 +1,10 @@
-Options +Indexes
 DirectoryIndex static-home.html index.php
-
+Options +Indexes +Includes
+AddType text/html .html
+AddHandler server-parsed .html
 
 # BEGIN WordPress
+
 # The directives (lines) between `BEGIN WordPress` and `END WordPress` are
 # dynamically generated, and should only be modified via WordPress filters.
 # Any changes to the directives between these markers will be overwritten.
