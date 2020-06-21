@@ -42,9 +42,6 @@
 .story-subtitle {
 	font-size: 16px;
 }
-.video-poster {
-	margin: 5% 0;
-}
 .story button {
 	cursor: pointer;
 	border: none;
@@ -54,6 +51,7 @@
 	position: relative;
 }
 .modal-container {
+	position: relative;
 	background: #f0f7fc;
 	/*background: red;*/
 	border-radius: 20px 20px 0 0;
@@ -72,13 +70,44 @@
 	background: none;
 	border: none;
 }
-.modal-close {
+.video-poster-btn {
+	position: relative;
+	padding: 0;
+	margin: 5% 0;
+}
+.video-poster-play-btn {
+	width: 20px;
+	margin: 0 5px 0 0;
+}
+.video-poster::before {
+	/*content: ' ';
+	background: url(/static-home-assets/play-button.svg) no-repeat 50% 50%;
+	background-size: 25%;
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
-	display: inline-block;
-	text-align: right;
+	height: 100%;*/
+}
+.video-poster-ribbon {
+	background: linear-gradient(0, #000, transparent);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 5px 10px;
+	width: 100%;
+	font-size: 16px;
+	color: #fff;
+	text-align: left;
+}
+.modal-close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 30px;
 }
 .modal-contents {
-	padding: 20px 0;
+	padding: 40px 20px;
 }
 .real-stories-title {
 	color: #b54633;
@@ -157,9 +186,6 @@ html.is-modal-open .show-for-modal {
 	.story > * + * {
 		margin-left: 5%;
 	}
-	.modal-contents {
-		padding: 20px;
-	}
 	.modal-summary {
 		padding: 0 100px;
 	}
@@ -169,7 +195,7 @@ html.is-modal-open .show-for-modal {
 	.modal-title {
 		font-size: 50px;
 	}
-	.video-poster {
+	.video-poster-img {
 		flex-shrink: 1;
 	}
 	.modal-cta button {
