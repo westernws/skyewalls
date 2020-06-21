@@ -12,7 +12,7 @@
 
 <div class="main">
 	<div id="modal-container" class="modal-container container show-for-modal">
-		<button type="button" id="modal-close" class="modal-close">
+		<button type="button" data-close-modal class="modal-close">
 			<img src="/static-home-assets/modal-close.svg" alt="Close modal" />
 		</button>
 		<div class="modal-contents">
@@ -24,7 +24,7 @@
 					<p id="modal-description" class="modal-description"></p>
 				</div>
 				<div class="modal-cta">
-					<button type="button">More Real Stories</button>
+					<button type="button" data-close-modal>More Real Stories</button>
 				</div>
 			</div>
 		</div>
@@ -70,6 +70,7 @@
 							<div class="video-poster">
 								<img
 									class="video-poster-img"
+									data-video-poster="let-there-be-light"
 									src="//skyewallsbywws.com/cdn-cgi/image/fit=contain,width=1920,height=489/static-home-assets/let-there-be-light.png"
 									srcset="
 										//skyewallsbywws.com/cdn-cgi/image/fit=contain,width=1920,dpr=1/static-home-assets/let-there-be-light.png 1920w,
@@ -110,6 +111,7 @@
 							<div class="video-poster">
 								<img
 									class="video-poster-img"
+									data-video-poster="fixing-the-fireplace"
 									src="//skyewallsbywws.com/cdn-cgi/image/fit=contain,width=1920,height=489/static-home-assets/fixing-the-fireplace.png"
 									srcset="
 										//skyewallsbywws.com/cdn-cgi/image/fit=contain,width=1920,dpr=1/static-home-assets/fixing-the-fireplace.png 1920w,
@@ -149,9 +151,10 @@
 						<button class="open-modal video-poster-btn" type="button" data-open-modal data-modal-video-id="wedding-countdown">
 							<div class="video-poster">
 								<img
-										class="video-poster-img"
-										src="//skyewallsbywws.com/cdn-cgi/image/fit=contain,width=1920,height=489/static-home-assets/wedding-countdown.png"
-										srcset="
+									class="video-poster-img"
+									data-video-poster="wedding-countdown"
+									src="//skyewallsbywws.com/cdn-cgi/image/fit=contain,width=1920,height=489/static-home-assets/wedding-countdown.png"
+									srcset="
 										//skyewallsbywws.com/cdn-cgi/image/fit=contain,width=1920,dpr=1/static-home-assets/wedding-countdown.png 1920w,
 										//skyewallsbywws.com/cdn-cgi/image/fit=contain,width=1200,dpr=1/static-home-assets/wedding-countdown.png 1200w,
 										//skyewallsbywws.com/cdn-cgi/image/fit=contain,width=992,dpr=1/static-home-assets/wedding-countdown.png 992w,
@@ -196,21 +199,18 @@
 				title: 'Let There Be Light',
 				description: 'With a busy family, Melanie and Brian needed a quick and easy solution to bring more light into their home.',
 				videoSrc: '/static-home-assets/brighter-v4.mp4',
-				poster: '//skyewallsbywws.com/cdn-cgi/image/fit=contain,width=300/static-home-assets/let-there-be-light.png',
 			},
 			{
 				id: 'fixing-the-fireplace',
 				title: 'Fixing the Fireplace',
 				description: 'Sandy and Steve resolve to treat themselves to a new view and end up fixing a crack in the fireplace in the process.',
 				videoSrc: '/static-home-assets/brighter-v4.mp4',
-				poster: '//skyewallsbywws.com/cdn-cgi/image/fit=contain,width=300/static-home-assets/let-there-be-light.png',
 			},
 			{
 				id: 'wedding-countdown',
 				title: 'Wedding Countdown',
 				description: 'With just weeks to go before hosting a wedding in their backyard, Cindy and Ken make a decision to open up their home to guests in more ways than one.',
 				videoSrc: '/static-home-assets/the-wow-factor-02072020.mp4',
-				poster: '//skyewallsbywws.com/cdn-cgi/image/fit=contain,width=300/static-home-assets/wedding-countdown.png',
 			},
 		];
 		var openModal = function (videoId, skipPushState) {
@@ -218,12 +218,22 @@
 				return datum.id === videoId;
 			}.bind(this));
 
-			$('#video-container').html('<video id="the-video" class="the-video" autoplay controls poster="' + selectedData.poster + '"><source src="' + selectedData.videoSrc + '" type="video/mp4" /></video>');
+			if (!selectedData) {
+				return;
+			}
+			var selectedVideoId = selectedData.id;
+			var $posterImg = $('[data-video-poster="' + selectedVideoId + '"]');
+			var posterSrc = '';
+
+			if ($posterImg.length) {
+				posterSrc = $posterImg.get(0).currentSrc || $posterImg.get(0).naturalWidth;
+			}
+			$('#video-container').html('<video id="the-video" class="the-video" autoplay controls poster="' + posterSrc + '"><source src="' + selectedData.videoSrc + '" type="video/mp4" /></video>');
 			$('#modal-title').html(selectedData.title);
 			$('#modal-description').html(selectedData.description);
 			$('html').addClass('is-modal-open');
 			if (!skipPushState) {
-				history.replaceState({ videoId: selectedData.id }, document.title, '?video=' + selectedData.id);
+				history.replaceState({ videoId: selectedVideoId }, document.title, '?video=' + selectedVideoId);
 			}
 			window.scrollTo(0, 0);
 		};
@@ -256,7 +266,7 @@
 		$('[data-open-modal]').on('click', function () {
 			openModal($(this).attr('data-modal-video-id'));
 		});
-		$('#modal-close').on('click', function () {
+		$('[data-close-modal]').on('click', function () {
 			closeModal();
 		});
 		$(window).on('popstate', function (event) {
