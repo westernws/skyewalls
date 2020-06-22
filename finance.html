@@ -5,6 +5,95 @@
 	<!--#include virtual="static-home-assets/includes/_head.html" -->
 
 	<link rel="stylesheet" href="static-home-assets/finance.min.css" />
+	<style>
+		#real-stories .vc_carousel-control {
+			display: none !important;
+		}
+		.story-container {
+			position: relative;
+			display: inline-block;
+			height: 100%;
+		}
+		.story-overlay {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: rgba(129, 180, 216, 0.90);
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			padding: 10px;
+		}
+		.story-overlay > * + * {
+			margin: 10px 0 0;
+		}
+		.story-overlay-title {
+			color: #004976;
+			font-size: 30px;
+		}
+		.story-cta {
+			margin: 30px auto 0;
+			background: #b54633;
+			border-radius: 40px;
+			padding: 10px 30px;
+			transition: all 300ms ease-in-out;
+			color: #fff;
+			text-transform: uppercase;
+			text-align: center;
+			font-weight: bold;
+			font-size: 20px;
+		}
+		.story-cta.story-cta:hover {
+			background: #004976;
+			color: #fff;
+		}
+		@media (min-width: 481px) {
+			.story-overlay {
+				padding: 40px 80px;
+			}
+			.story-overlay-title {
+				font-size: 40px;
+			}
+		}
+		@media (min-width: 768px) {
+			.story-overlay {
+				padding: 10px;
+			}
+			.story-overlay-title {
+				font-size: 21px;
+				margin: 0;
+			}
+			.story-overlay-description {
+				font-size: 14px;
+				line-height: 1.4;
+			}
+			.story-cta {
+				font-size: 14px;
+				padding: 5px;
+				margin: 20px 0 0;
+			}
+		}
+		@media (min-width: 992px) {
+			.story-overlay-title {
+				font-size: 27px;
+			}
+			.story-overlay-description,
+			.story-cta {
+				font-size: 16px;
+			}
+		}
+		@media (min-width: 1200px) {
+			.story-overlay-title {
+				font-size: 36px;
+			}
+			.story-overlay-description,
+			.story-cta {
+				font-size: 18px;
+			}
+		}
+	</style>
 </head>
 <body class="home page-template-default page page-id-148 wp-embed-responsive weefly-main theme-weefly woocommerce-no-js wpb-js-composer js-comp-ver-6.1 vc_responsive">
 
@@ -397,7 +486,7 @@
 						</div>
 
 
-						<div class="wpb_images_carousel wpb_content_element vc_clearfix image-carousel">
+						<div class="wpb_images_carousel wpb_content_element vc_clearfix">
 							<div class="wpb_wrapper">
 								<div id="vc_images-carousel-1-1591315075" data-ride="vc_carousel" data-wrap="false"
 								     style="width: 100%;" data-interval="0" data-auto-height="yes"
@@ -411,28 +500,67 @@
 									<div class="vc_carousel-inner">
 										<div class="vc_carousel-slideline">
 											<div class="vc_carousel-slideline-inner">
-												<div class="vc_item">
-													<div class="vc_inner"><img width="1276" height="1128"
-													                           src="https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Salvo@2x-new.jpg"
-													                           class="attachment-full" alt=""
-													                           srcset="https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Salvo@2x-new.jpg 1276w, https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Salvo@2x-new-300x265.jpg 300w, https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Salvo@2x-new-1024x905.jpg 1024w, https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Salvo@2x-new-768x679.jpg 768w, https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Salvo@2x-new-600x530.jpg 600w"
-													                           sizes="(max-width: 1276px) 100vw, 1276px"/>
+												<div class="vc_item" data-rollover-id="after-salvo-content">
+													<div class="vc_inner">
+														<span class="story-container">
+															<img
+																width="1276"
+																height="1128"
+																src="https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Salvo@2x-new.jpg"
+																class="attachment-full" alt=""
+																srcset="https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Salvo@2x-new.jpg 1276w, https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Salvo@2x-new-300x265.jpg 300w, https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Salvo@2x-new-1024x905.jpg 1024w, https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Salvo@2x-new-768x679.jpg 768w, https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Salvo@2x-new-600x530.jpg 600w"
+																sizes="(max-width: 1276px) 100vw, 1276px"
+															/>
+															<div id="after-salvo-content" class="story-overlay" style="display: none;">
+																<h4 class="story-overlay-title">Fixing the Fireplace</h4>
+																<p class="story-overlay-description">Sandy and Steve resolve to treat themselves to a new view and end up fixing a crack in the fireplace in the process.</p>
+																<a class="story-cta" href="/real-stories.html?video=fixing-the-fireplace">
+																	See Their Story
+																</a>
+															</div>
+														</span>
 													</div>
 												</div>
-												<div class="vc_item">
-													<div class="vc_inner"><img width="1264" height="1128"
-													                           src="https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Shellabarger@2x-new.jpg"
-													                           class="attachment-full" alt=""
-													                           srcset="https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Shellabarger@2x-new.jpg 1264w, https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Shellabarger@2x-new-300x268.jpg 300w, https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Shellabarger@2x-new-1024x914.jpg 1024w, https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Shellabarger@2x-new-768x685.jpg 768w, https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Shellabarger@2x-new-600x535.jpg 600w"
-													                           sizes="(max-width: 1264px) 100vw, 1264px"/>
+												<div class="vc_item" data-rollover-id="after-shellabarger-content">
+													<div class="vc_inner">
+														<span class="story-container">
+															<img
+																width="1264"
+																height="1128"
+																src="https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Shellabarger@2x-new.jpg"
+																class="attachment-full" alt=""
+																srcset="https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Shellabarger@2x-new.jpg 1264w, https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Shellabarger@2x-new-300x268.jpg 300w, https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Shellabarger@2x-new-1024x914.jpg 1024w, https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Shellabarger@2x-new-768x685.jpg 768w, https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Shellabarger@2x-new-600x535.jpg 600w"
+																sizes="(max-width: 1264px) 100vw, 1264px"
+															/>
+															<div id="after-shellabarger-content" class="story-overlay" style="display: none;">
+																<h4 class="story-overlay-title">Let There Be Light</h4>
+																<p class="story-overlay-description">With a busy family, Melanie and Brian needed a quick and easy solution to bring more light into their home.</p>
+																<a class="story-cta" href="/real-stories.html?video=let-there-be-light">
+																	See Their Story
+																</a>
+															</div>
+														</span>
 													</div>
 												</div>
-												<div class="vc_item">
-													<div class="vc_inner"><img width="1292" height="1128"
-													                           src="https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Clovis@2x-new.jpg"
-													                           class="attachment-full" alt=""
-													                           srcset="https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Clovis@2x-new.jpg 1292w, https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Clovis@2x-new-300x262.jpg 300w, https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Clovis@2x-new-1024x894.jpg 1024w, https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Clovis@2x-new-768x671.jpg 768w, https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Clovis@2x-new-600x524.jpg 600w"
-													                           sizes="(max-width: 1292px) 100vw, 1292px"/>
+												<div class="vc_item" data-rollover-id="after-clovis-content">
+													<div class="vc_inner">
+														<span class="story-container">
+															<img
+																width="1292"
+																height="1128"
+																src="https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Clovis@2x-new.jpg"
+																class="attachment-full" alt=""
+																srcset="https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Clovis@2x-new.jpg 1292w, https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Clovis@2x-new-300x262.jpg 300w, https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Clovis@2x-new-1024x894.jpg 1024w, https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Clovis@2x-new-768x671.jpg 768w, https://skyewallsbywws.com/wp-content/uploads/2020/05/After_Clovis@2x-new-600x524.jpg 600w"
+																sizes="(max-width: 1292px) 100vw, 1292px"
+															/>
+															<div id="after-clovis-content" class="story-overlay" style="display: none;">
+																<h4 class="story-overlay-title">Wedding Countdown</h4>
+																<p class="story-overlay-description">With just weeks to go before hosting a wedding in their backyard, Cindy and Ken make a decision to open up their home to guests in more ways than one.</p>
+																<a class="story-cta" href="/real-stories.html?video=wedding-countdown">
+																	See Their Story
+																</a>
+															</div>
+														</span>
 													</div>
 												</div>
 											</div>
@@ -561,6 +689,29 @@
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 
 <!--#include virtual="static-home-assets/includes/_scripts.html" -->
+
+<script>
+	(function ($) {
+		'use strict';
+
+		$('#real-stories').find('.vc_item').hover(
+			function () {
+				var rolloverId = $(this).attr('data-rollover-id');
+
+				if (rolloverId) {
+					$('#' + rolloverId).fadeIn();
+				}
+			},
+			function () {
+				var rolloverId = $(this).attr('data-rollover-id');
+
+				if (rolloverId) {
+					$('#' + rolloverId).fadeOut();
+				}
+			}
+		);
+	}(window.jQuery));
+</script>
 
 </body>
 </html>
