@@ -5,6 +5,9 @@
 	<!--#include virtual="static-home-assets/includes/_head.html"-->
 
 	<style>
+		.main-navigation .logo > a > img {
+			height: 130px;
+		}
 		.vot-cta {
 			color: #fff;
 		}
@@ -29,6 +32,15 @@
 		.watch-real-stories-btn:hover {
 			background: #004976;
 			color: #fff !important;
+		}
+		.chooser .chooser-step {
+			padding: 10px;
+		}
+		.chooser-panel.choose-style img {
+			max-width: 75%;
+		}
+		.chooser-panel.choose-style .pillar-right-col img {
+			max-width: 35%;
 		}
 	</style>
 </head>
@@ -234,7 +246,7 @@
 											<div class="wpb_wrapper">
 												<ul class="reimagination-icon-container">
 													<li class="outdoors"><img class="lozad size-full wp-image-1985"
-													                          data-lozad-trigger src="https://skyewallsbywws.com/wp-content/uploads/2020/03/Icon_AReimaginationOfSpace_1_Blue@2x.jpg"
+													                          data-lozad-trigger src="/static-home-assets/reimagination-space-01.svg"
 													                          alt="" width="214" height="229"/>
 														<div class="reimagination-content wd-primary-color"><strong>View
 															to the outdoors</strong> 365 days a year
@@ -243,11 +255,12 @@
 													<li class="reimagination-divider-item"><img class="lozad reimagination-divider"
 													         data-lozad-trigger src="https://skyewallsbywws.com/wp-content/uploads/2020/03/light-blue-gradient.jpg"
 													         alt=""/></li>
-													<li class="natural-light"><img class="lozad size-full wp-image-1987"
-													                               data-lozad-trigger src="static-home-assets/Icon_AReimaginationOfSpace_2_Blue@2x-min.jpg"
-													                               alt="" width="181" height="181"
-													                               srcset="static-home-assets/Icon_AReimaginationOfSpace_2_Blue@2x-min.jpg 181w, https://skyewallsbywws.com/wp-content/uploads/2020/03/Icon_AReimaginationOfSpace_2_Blue@2x-150x150.jpg 150w, https://skyewallsbywws.com/wp-content/uploads/2020/03/Icon_AReimaginationOfSpace_2_Blue@2x-100x100.jpg 100w"
-													                               sizes="(max-width: 181px) 100vw, 181px"/>
+													<li class="natural-light">
+														<img
+															class="lozad size-full wp-image-1987"
+															data-lozad-trigger src="/static-home-assets/reimagination-space-02.svg"
+															alt="" width="181" height="181"
+														/>
 														<div class="reimagination-content wd-primary-color">Loads of
 															<strong>natural light</strong></div>
 													</li>
@@ -289,22 +302,24 @@
 										<div class="wpb_text_column wpb_content_element ">
 											<div class="wpb_wrapper">
 												<ul class="reimagination-icon-container">
-													<li class="airflow"><img class="lozad size-full wp-image-1991"
-													                         data-lozad-trigger src="https://skyewallsbywws.com/wp-content/uploads/2020/03/Icon_AReimaginationOfSpace_4_Blue@2x.jpg"
-													                         alt=""
-													                         srcset="https://skyewallsbywws.com/wp-content/uploads/2020/03/Icon_AReimaginationOfSpace_4_Blue@2x.jpg 242w, https://skyewallsbywws.com/wp-content/uploads/2020/03/Icon_AReimaginationOfSpace_4_Blue@2x-200x150.jpg 200w"
-													                         sizes="(max-width: 242px) 100vw, 242px"/>
+													<li class="airflow">
+														<img
+															class="lozad size-full wp-image-1991"
+															data-lozad-trigger src="/static-home-assets/reimagination-space-03.svg"
+															alt=""
+														/>
 														<div class="reimagination-content wd-primary-color">Increased
 															<strong>airflow and circulation</strong></div>
 													</li>
 													<li class="reimagination-divider-item"><img class="lozad reimagination-divider"
 													         data-lozad-trigger src="https://skyewallsbywws.com/wp-content/uploads/2020/03/light-blue-gradient.jpg"
 													         alt=""/></li>
-													<li class="spacious"><img class="lozad size-full wp-image-1993"
-													                          data-lozad-trigger src="https://skyewallsbywws.com/wp-content/uploads/2020/03/Icon_AReimaginationOfSpace_5_Blue@2x.jpg"
-													                          alt=""
-													                          srcset="https://skyewallsbywws.com/wp-content/uploads/2020/03/Icon_AReimaginationOfSpace_5_Blue@2x.jpg 180w, https://skyewallsbywws.com/wp-content/uploads/2020/03/Icon_AReimaginationOfSpace_5_Blue@2x-150x150.jpg 150w, https://skyewallsbywws.com/wp-content/uploads/2020/03/Icon_AReimaginationOfSpace_5_Blue@2x-100x100.jpg 100w"
-													                          sizes="(max-width: 180px) 100vw, 180px"/>
+													<li class="spacious">
+														<img
+															class="lozad size-full wp-image-1993"
+															data-lozad-trigger src="/static-home-assets/reimagination-space-04.svg"
+															alt=""
+														/>
 														<div class="reimagination-content wd-primary-color">Rooms appear
 															<strong>more spacious</strong></div>
 													</li>
@@ -623,11 +638,12 @@
 											<div class="wpb_wrapper">
 												<div class="we-got-this-icon-container">
 													<div class="we-got-this-icon">
-														<img data-lozad-trigger src="https://skyewallsbywws.com/wp-content/uploads/2020/03/Icon_SupportThatHasYouCovered@2x.jpg"
-														     onmouseover="this.src='https://skyewallsbywws.com/wp-content/uploads/2020/03/Icon_SupportThatHasYouCovered_RO@2x.jpg'"
-														     onmouseout="this.src='https://skyewallsbywws.com/wp-content/uploads/2020/03/Icon_SupportThatHasYouCovered@2x.jpg'"
-														     alt=""
-														     class="lozad"
+														<img
+															src="/static-home-assets/our-process-icon-support-off.svg"
+															onmouseover="this.src='/static-home-assets/our-process-icon-support-on.svg'"
+															onmouseout="this.src='/static-home-assets/our-process-icon-support-off.svg'"
+															alt=""
+															class="lozad"
 														/>
 													</div>
 													<div class="we-got-this-icon-content"><strong>Support That Has You
@@ -656,12 +672,12 @@
 											<div class="wpb_wrapper">
 												<div class="we-got-this-icon-container">
 													<div class="we-got-this-icon">
-
-														<img data-lozad-trigger src="https://skyewallsbywws.com/wp-content/uploads/2020/04/Icon_WeStandBehindOurProducts@2x.jpg"
-														     onmouseover="this.src='https://skyewallsbywws.com/wp-content/uploads/2020/04/Icon_WeStandBehindOurProducts_RO@2x.jpg'"
-														     onmouseout="this.src='https://skyewallsbywws.com/wp-content/uploads/2020/04/Icon_WeStandBehindOurProducts@2x.jpg'"
-														     alt=""
-														     class="lozad"
+														<img
+															src="/static-home-assets/our-process-icon-products-off.svg"
+															onmouseover="this.src='/static-home-assets/our-process-icon-products-on.svg'"
+															onmouseout="this.src='/static-home-assets/our-process-icon-products-off.svg'"
+															alt=""
+															class="lozad"
 														/>
 													</div>
 													<div class="we-got-this-icon-content" style="padding-right:25px;">
@@ -680,12 +696,14 @@
 						<div class="wpb_single_image wpb_content_element vc_align_left">
 
 							<figure class="wpb_wrapper vc_figure">
-								<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="1305" height="16"
-								                                                               data-lozad-trigger src="https://skyewallsbywws.com/wp-content/uploads/2020/03/light-blue-gradient.jpg"
-								                                                               class="lozad vc_single_image-img attachment-full"
-								                                                               alt=""
-								                                                               srcset="https://skyewallsbywws.com/wp-content/uploads/2020/03/light-blue-gradient.jpg 1305w, https://skyewallsbywws.com/wp-content/uploads/2020/03/light-blue-gradient-300x4.jpg 300w, https://skyewallsbywws.com/wp-content/uploads/2020/03/light-blue-gradient-1024x13.jpg 1024w, https://skyewallsbywws.com/wp-content/uploads/2020/03/light-blue-gradient-768x9.jpg 768w, https://skyewallsbywws.com/wp-content/uploads/2020/03/light-blue-gradient-600x7.jpg 600w"
-								                                                               sizes="(max-width: 1305px) 100vw, 1305px"/>
+								<div class="vc_single_image-wrapper vc_box_border_grey">
+									<img width="1305" height="16"
+										data-lozad-trigger src="https://skyewallsbywws.com/wp-content/uploads/2020/03/light-blue-gradient.jpg"
+										class="lozad vc_single_image-img attachment-full"
+										alt=""
+										srcset="https://skyewallsbywws.com/wp-content/uploads/2020/03/light-blue-gradient.jpg 1305w, https://skyewallsbywws.com/wp-content/uploads/2020/03/light-blue-gradient-300x4.jpg 300w, https://skyewallsbywws.com/wp-content/uploads/2020/03/light-blue-gradient-1024x13.jpg 1024w, https://skyewallsbywws.com/wp-content/uploads/2020/03/light-blue-gradient-768x9.jpg 768w, https://skyewallsbywws.com/wp-content/uploads/2020/03/light-blue-gradient-600x7.jpg 600w"
+										sizes="(max-width: 1305px) 100vw, 1305px"
+									/>
 								</div>
 							</figure>
 						</div>
@@ -728,11 +746,12 @@
 											<div class="wpb_wrapper">
 												<div class="we-got-this-icon-container">
 													<div class="we-got-this-icon">
-														<img data-lozad-trigger src="https://skyewallsbywws.com/wp-content/uploads/2020/03/Icon_FinancingTheFitsMostBudgets@2x.jpg"
-														     onmouseover="this.src='https://skyewallsbywws.com/wp-content/uploads/2020/03/Icon_FinancingTheFitsMostBudgets_RO@2x.jpg'"
-														     onmouseout="this.src='https://skyewallsbywws.com/wp-content/uploads/2020/03/Icon_FinancingTheFitsMostBudgets@2x.jpg'"
-														     alt=""
-														     class="lozad"
+														<img
+															src="/static-home-assets/our-process-icon-financing-off.svg"
+															onmouseover="this.src='/static-home-assets/our-process-icon-financing-on.svg'"
+															onmouseout="this.src='/static-home-assets/our-process-icon-financing-off.svg'"
+															alt=""
+															class="lozad"
 														/>
 													</div>
 													<div class="we-got-this-icon-content" style="padding-right:25px;">
@@ -774,11 +793,12 @@
 											<div class="wpb_wrapper">
 												<div class="we-got-this-icon-container">
 													<div class="we-got-this-icon">
-														<img class="lozad size-medium wp-image-1787"
-														     data-lozad-trigger src="https://skyewallsbywws.com/wp-content/uploads/2020/03/Icon_AnIndustry-LeadingWarranty@2x.jpg"
-														     onmouseover="this.src='https://skyewallsbywws.com/wp-content/uploads/2020/03/Icon_AnIndustry-LeadingWarranty_RO@2x.jpg'"
-														     onmouseout="this.src='https://skyewallsbywws.com/wp-content/uploads/2020/03/Icon_AnIndustry-LeadingWarranty@2x.jpg'"
-														     alt=""
+														<img
+															src="/static-home-assets/our-process-icon-warranty-off.svg"
+															onmouseover="this.src='/static-home-assets/our-process-icon-warranty-on.svg'"
+															onmouseout="this.src='/static-home-assets/our-process-icon-warranty-off.svg'"
+															alt=""
+															class="lozad"
 														/>
 													</div>
 													<div class="we-got-this-icon-content" style="padding-right:20px;">
@@ -1048,7 +1068,7 @@
 								<div class="chooser-panel choose-style">
 									<div class="pillar-container">
 										<div class="pillar pillar-left-col">
-											<img data-lozad-trigger src="https://skyewallsbywws.com/wp-content/uploads/2020/03/doors-sliding.jpg"
+											<img data-lozad-trigger src="/static-home-assets/IndoorOutDoorYourDoor_Folding.svg"
 											     alt="Western Window Systems Folding Doors"
 											     class="lozad"/>
 											<div class="pillar-content u-tal">
@@ -1060,10 +1080,10 @@
 										</div>
 										<div class="pillar pillar-right-col">
 											<div class="two-col">
-												<img data-lozad-trigger src="https://skyewallsbywws.com/wp-content/uploads/2020/03/doors-sliding-stacked.jpg"
+												<img data-lozad-trigger src="/static-home-assets/IndoorOutDoorYourDoor_Stacked.svg"
 												     alt="Western Window Systems Sliding Stacked Doors"
 												     class="lozad"/>
-												<img data-lozad-trigger src="https://skyewallsbywws.com/wp-content/uploads/2020/03/doors-sliding-pocket-1.jpg"
+												<img data-lozad-trigger src="/static-home-assets/IndoorOutDoorYourDoor_Pocketed.svg"
 												     alt="Western Window Systems Sliding Pocket Doors"
 												     class="lozad"/>
 											</div>
