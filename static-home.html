@@ -1406,11 +1406,11 @@
 <script>
 	(function ($) {
 		var isLocal = /local./.test(location.hostname);
-		var url = isLocal ? '/static-home-assets/json-stub.json' : '/wp-json/wp/v2/pages/2878';
+		var url = isLocal ? '/static-home-assets/json-stub.html' : '/wp-json/wp/v2/pages/2878';
+		var html = $('<div />');
 
-		$.get(url).done(function (json) {
-			console.log(json);
-			var images = $(json.content.rendered).find('img');
+		html.load(url + ' article#post-2878', function (resp) {
+			var images = html.find('img');
 			var isSliderReady = function () {
 				return $('#rev_slider_16_2').find('rs-sbg').length > 0;
 			}
